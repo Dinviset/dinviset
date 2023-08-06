@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Free_Sample_By_Wix.jpg" class="Logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Printing Technologist</p>
+            <h1>Hi, I'm <span>Dinh</span> Nguyen<br>from Switzerland</h1>
+        </div>
+    </div>
+</div>
+
+<!----------------------------------------------------------------------About------------------------------------------------------------------------->
+
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/IMG_20210814_182807_246.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Ich bin Dinh, und ich zeichne mich durch Orientierung, Bewusstsein, Zielstrebigkeit und Motivation aus. 
+                    Ich empfinde Freude am Klavierspielen, Lesen und Lernen, was meine vielfältigen Interessen widerspiegelt. 
+                    Zeit mit Freunden, meiner Freundin und meiner Familie zu verbringen, ist mir wichtig und zeigt meine 
+                    Verbundenheit zu wichtigen Beziehungen. Mein Selbstbewusstsein verleiht mir eine starke Präsenz, 
+                    und insgesamt strahle ich eine positive und ausgeglichene Lebensweise aus. </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Bogenoffsetdruck</span><br>Fachkenntnisse im Druckverfahren</li>
+                            <li><span>Farbmanagement</span><br>Präzise Farbanpassung für Qualität</li>
+                            <li><span>Effizienzoptimierung</span><br>Anpassung für beste Effizienz und Qualität</li>
+                            <li><span>Projektmanagement</span><br>Planung und Überwachung von Druckprojekten</li>
+                            <li><span>Maschinenbedienung & Wartung</span><br>Einrichtung, Bedienung und Pflege von Druckmaschinen</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2023 - Heute</span><br>Drucktechnologe, SX 52 4/0 L <br>Ostschweizdruck AG, Wittenbach SG</li>
+                            <li><span>2019 - 2023</span><br>Drucktechnologe, SM 52 2/2, XL 75 5/0 L, KAMA Buchdruck, <br>Schmid-Fehr AG, Goldach SG</li>
+                            <li><span>2019 - 2019</span><br>Drucktechnologe, XL 75 5/0 L (Wasserlos) <br>Lutz AG, Speicher AR</li>
+                            <li><span>2015 - 2019</span><br>Drucktechnologe EFZ, GTO 1/0, SM 74 5/0 L <br>E-Druck AG SG</li>
+                            <li><span>2014 - 2015</span><br>Gestalterischer Vorkurs, <br>GBS Riethüsli SG</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>???</span><br>keine</li>
+                           
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -------------------------------------------------------------------Services-------------------------------------------------------------- -->
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+  
+
+</script>
+
+</body>
+</html>
